@@ -3,6 +3,7 @@ import Main from "./Main/Main";
 import PopBrowser from "./Popups/PopBrowser/PopBrowser";
 import PopExit  from "./Popups/PopExit/PopExit";
 import PopNewCard  from "./Popups/PopNewCard/PopNewCard";
+import { cardList, statuses} from "../../Data";
 
 export default function Wrapper() {
     return (
@@ -12,7 +13,7 @@ export default function Wrapper() {
     <PopNewCard />
     <PopBrowser />
     <Header />
-    <Main />
+    <Main cardList={cardList} status={statuses}/>
 </div>
     )
 }
